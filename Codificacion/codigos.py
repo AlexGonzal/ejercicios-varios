@@ -1,3 +1,4 @@
+#Version 2.0 de este programa
 #este programa codifica al cliente por nombre , tipo y fecha
 
 from datetime import datetime
