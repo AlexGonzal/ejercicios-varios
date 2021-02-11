@@ -58,5 +58,4 @@ def run():
     print (" te gusta mi codigo?")
 
 
-def __main__ init :
-    run()
+run()
