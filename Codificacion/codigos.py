@@ -50,8 +50,15 @@ def tipo_proyecto():
     return codigo_b
 
 def datos (codigo):
-    archivo = open('clientes.txt','w')
-    archivo.write(codigo)
+    lista=[]
+    cadena = ""
+    archivo = open('clientes.txt','r')
+    for linea in archivo.readlines():
+        lista.append(linea)
+    lista.append(codigo)
+    for i in lista:
+        cadena += i
+    archivo.write(cadena)
     archivo.close()
 
 
