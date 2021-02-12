@@ -51,17 +51,21 @@ def tipo_proyecto():
 
 def datos (codigo):
     lista=[]
-    cadena = ""
     archivo = open('clientes.txt','r')
     for linea in archivo.readlines():
         lista.append(linea.rstrip('\n'))
     archivo.close()
-    lista.append(codigo)
-    print(lista)
-    archivo = open('clientes.txt','w')
-    for i in lista :
-        archivo.write(i+'\n')
-    archivo.close()
+    if codigo in lista:
+        print("El codigo para este proyecto ya existe")
+ 
+    else:
+        lista.append(codigo)
+        print(lista)
+        archivo = open('clientes.txt','w')
+        for i in lista :
+            archivo.write(i+'\n')
+        archivo.close()
+        
 
 
 
@@ -71,6 +75,7 @@ def run():
     print( f'tu codigo es {codigo}')
     datos(codigo)
     print (" te gusta mi codigo?")
+
 
 run()
 
