@@ -2,6 +2,7 @@
 #este programa codifica al cliente por nombre , tipo y fecha
 
 from datetime import datetime
+import io
 
 def code_client():
     """Esta funcion tiene la finalidad de pedir al usuario que introduzca el nombre del cliente del proyecto en desarrollo"""
@@ -15,8 +16,6 @@ def code_client():
         else:
             print( " por favor introduzca un nombre con mas caracteres ")
     return codigo_a
-
-
 
 def tipo_proyecto():
     """Esta funcion pide al usuario especificar el tipo de proyecto y genera siglas a partir de el"""
@@ -50,12 +49,26 @@ def tipo_proyecto():
 
     return codigo_b
 
+    archivo = open('clientes.txt','w')
+    archivo.write(codigo)
+    archivo.close()
+
+    
+
+
+
+
+
 def run():
     now = str(datetime.now())
     codigo = code_client().upper() + "-" + "01" + now[2:4] + "-" + tipo_proyecto()
     print( f'tu codigo es {codigo}')
-
     print (" te gusta mi codigo?")
-
+    archivo = open('clientes.txt','w')
+    archivo.write(codigo)
+    archivo.close()
 
 run()
+archivo = open('clientes.txt','w')
+archivo.write('Jodaaaaaa')
+archivo.close()
