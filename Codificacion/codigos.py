@@ -2,11 +2,6 @@
 #este programa codifica al cliente por nombre , tipo y fecha
 
 from datetime import datetime
-import io
-
-archivo = open('clientes.txt','w')
-archivo.write('Jodaaaaaa')
-archivo.close()
 
 
 def code_client():
@@ -54,24 +49,18 @@ def tipo_proyecto():
 
     return codigo_b
 
+def datos (codigo):
     archivo = open('clientes.txt','w')
     archivo.write(codigo)
     archivo.close()
-
-    
-
-
-
 
 
 def run():
     now = str(datetime.now())
     codigo = code_client().upper() + "-" + "01" + now[2:4] + "-" + tipo_proyecto()
     print( f'tu codigo es {codigo}')
+    datos(codigo)
     print (" te gusta mi codigo?")
-    archivo = open('clientes.txt','w')
-    archivo.write(codigo)
-    archivo.close()
 
 run()
 
