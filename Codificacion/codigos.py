@@ -58,11 +58,11 @@ def datos (codigo):
     archivo.close()
     lista.append(codigo)
     for i in lista:
-        cadena += i
+        cadena += i + '\n'
     archivo = open('clientes.txt','w')
     archivo.write(cadena)
     archivo.close()
-    
+
 
 
 def run():
