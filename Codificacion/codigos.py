@@ -55,11 +55,14 @@ def datos (codigo):
     archivo = open('clientes.txt','r')
     for linea in archivo.readlines():
         lista.append(linea)
+    archivo.close()
     lista.append(codigo)
     for i in lista:
         cadena += i
+    archivo = open('clientes.txt','w')
     archivo.write(cadena)
     archivo.close()
+    
 
 
 def run():
