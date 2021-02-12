@@ -4,6 +4,11 @@
 from datetime import datetime
 import io
 
+archivo = open('clientes.txt','w')
+archivo.write('Jodaaaaaa')
+archivo.close()
+
+
 def code_client():
     """Esta funcion tiene la finalidad de pedir al usuario que introduzca el nombre del cliente del proyecto en desarrollo"""
     while True :
@@ -69,6 +74,4 @@ def run():
     archivo.close()
 
 run()
-archivo = open('clientes.txt','w')
-archivo.write('Jodaaaaaa')
-archivo.close()
+
