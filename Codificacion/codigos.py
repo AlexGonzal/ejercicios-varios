@@ -54,15 +54,13 @@ def datos (codigo):
     cadena = ""
     archivo = open('clientes.txt','r')
     for linea in archivo.readlines():
-        linea.replace('\n','')
-        lista.append(linea)
+        lista.append(linea.rstrip('\n'))
     archivo.close()
     lista.append(codigo)
     print(lista)
-    for i in lista:
-        cadena = i + '\n' + cadena
     archivo = open('clientes.txt','w')
-    archivo.write(cadena)
+    for i in lista :
+        archivo.write(i+'\n')
     archivo.close()
 
 
