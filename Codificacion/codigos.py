@@ -6,6 +6,9 @@ from datetime import datetime
 
 def code_client():
     """Esta funcion tiene la finalidad de pedir al usuario que introduzca el nombre del cliente del proyecto en desarrollo"""
+
+    print("Buenas soy Daniel")
+
     while True :
 
         nombre_cliente = input( " por favor introduzca el nombre del cliente : ")
